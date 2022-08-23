@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(function(){    //{페이지가 로드될 때 실행
+            // $("ul.foo") -> ul태그인데 .xx클래스 명. ul태그중 foo라는 class이름을 가진 태그
+            $("ul.foo").click(function(){   //ul태그 중 foo라는 클래스 명을 가진 태그를 클릭했을 때
+                $("li",this).css('background-color', 'red')     // this 클릭을 자신.
+            })  
+                
+        })
+    </script>
+</head>
+<body>
+    <p>Hello</p>
+    How are 
+    <p>you?</p>
+    <button>remove</button>
+    
+    <script>
+        // button태그를 선택했을때 p태그를 삭제하겠다. 
+        $("button").click(function(){
+            $("p").remove()
+        })
+    </script>
+</body>
+</html>
